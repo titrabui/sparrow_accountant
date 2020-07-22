@@ -8,6 +8,8 @@ const userType = gql`
     status: String
     hashedPassword: String!
     type: String
+    name: String!
+    avatar: String
   }
 `
 module.exports = userType

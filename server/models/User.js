@@ -33,6 +33,15 @@ const userSchema = mongoose.Schema({
     type: String,
     enum: ['ADMIN', 'BUSINESS', 'NORMAL']
   },
+  name: {
+    type: String,
+    minlength: 5,
+    required: true
+  },
+  avatar: {
+    type: String,
+    minlength: 5
+  }
 }, {
   timestamps: true
 })
