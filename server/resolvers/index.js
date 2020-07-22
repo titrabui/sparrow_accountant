@@ -1,7 +1,11 @@
 const { usersResolvers } = require('./usersResolvers')
+const { goodsResolvers } = require('./goodsResolvers')
+const { providersResolvers } = require('./providersResolvers')
 
 const resolvers = [
-  usersResolvers
+  usersResolvers,
+  goodsResolvers,
+  providersResolvers
 ]
 
 module.exports = {

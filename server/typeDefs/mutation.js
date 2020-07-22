@@ -14,6 +14,38 @@ const mutation = gql`
       username: String!
       password: String!
     ): Token
+    createGood(
+      goodId: String!
+      name: String!
+      specification: String!
+      unit: String!
+      providerId: ID
+    ): Good
+    updateGood(
+      id: ID!
+      goodId: String
+      name: String
+      specification: String
+      unit: String
+      providerId: ID
+    ): Good
+    deleteGood(
+      id: ID!
+    ): Good
+    createProvider(
+      name: String!
+      phone: String
+      address: String
+    ): Provider
+    updateProvider(
+      id: ID!
+      name: String
+      phone: String
+      address: String
+    ): Provider
+    deleteProvider(
+      id: ID!
+    ): Provider
   }
 `
 module.exports = mutation
