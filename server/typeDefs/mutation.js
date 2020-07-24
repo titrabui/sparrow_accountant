@@ -1,6 +1,10 @@
 const { gql } = require('apollo-server-express')
 
 const mutation = gql`
+  type Success {
+    success: Boolean!
+  }
+
   type Mutation {
     createUser(
       username: String!
@@ -36,16 +40,16 @@ const mutation = gql`
       name: String!
       phone: String
       address: String
-    ): Provider
+    ): Success!
     updateProvider(
       id: ID!
       name: String
       phone: String
       address: String
-    ): Provider
+    ): Success!
     deleteProvider(
-      id: ID!
-    ): Provider
+      ids: [ID]!
+    ): Success!
   }
 `
 module.exports = mutation

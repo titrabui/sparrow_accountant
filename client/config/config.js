@@ -12,7 +12,7 @@ export default defineConfig({
   },
   locale: {
     // default zh-CN
-    default: 'zh-CN',
+    default: 'en-EN',
     // default true, when it is true, will use `navigator.language` overwrite default
     antd: true,
     baseNavigator: true,
@@ -76,6 +76,12 @@ export default defineConfig({
               icon: 'table',
               path: '/list',
               component: './ListTableList',
+            },
+            {
+              name: 'Nhà cung cấp',
+              icon: 'idcard',
+              path: '/providers',
+              component: './provider',
             },
             {
               component: './404',
