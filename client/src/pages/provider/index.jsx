@@ -98,11 +98,23 @@ const ProviderList = () => {
     {
       title: 'Điện thoại',
       dataIndex: 'phone',
+      rules: [
+        {
+          min: 10,
+          message: 'Điện thoại phải nhập ít nhất 10 số',
+        },
+      ],
     },
     {
       title: 'Địa chỉ',
       dataIndex: 'address',
       valueType: 'textarea',
+      rules: [
+        {
+          min: 5,
+          message: 'Địa chỉ phải nhập ít nhất 5 ký tự',
+        },
+      ],
     },
     {
       title: 'Tác vụ',
