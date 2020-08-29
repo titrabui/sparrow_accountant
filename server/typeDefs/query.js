@@ -3,7 +3,11 @@ const { gql } = require('apollo-server-express')
 const query = gql`
   type Query {
     me: User
-    fetchGoods: [Good]
+    fetchGoods(
+      params: fetchGoodParamsInput
+      sorter: fetchGoodSorterInput
+      filter: fetchGoodFilterInput
+    ): ReturnedGood
     fetchProviders(
       params: fetchProviderParamsInput
       sorter: fetchProviderSorterInput
