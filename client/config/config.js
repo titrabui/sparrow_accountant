@@ -12,7 +12,7 @@ export default defineConfig({
   },
   locale: {
     // default zh-CN
-    default: 'zh-CN',
+    default: 'en-EN',
     // default true, when it is true, will use `navigator.language` overwrite default
     antd: true,
     baseNavigator: true,
@@ -47,35 +47,19 @@ export default defineConfig({
           routes: [
             {
               path: '/',
-              redirect: '/welcome',
+              redirect: '/goods',
             },
             {
-              path: '/welcome',
-              name: 'welcome',
-              icon: 'smile',
-              component: './Welcome',
+              name: 'Hàng hóa',
+              icon: 'code-sandbox',
+              path: '/goods',
+              component: './good',
             },
             {
-              path: '/admin',
-              name: 'admin',
-              icon: 'crown',
-              component: './Admin',
-              authority: ['admin'],
-              routes: [
-                {
-                  path: '/admin/sub-page',
-                  name: 'sub-page',
-                  icon: 'smile',
-                  component: './Welcome',
-                  authority: ['admin'],
-                },
-              ],
-            },
-            {
-              name: 'list.table-list',
-              icon: 'table',
-              path: '/list',
-              component: './ListTableList',
+              name: 'Nhà cung cấp',
+              icon: 'idcard',
+              path: '/providers',
+              component: './provider',
             },
             {
               component: './404',
