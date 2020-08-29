@@ -49,7 +49,7 @@ const providersResolvers = {
                 if (filter[key].includes(`${item[key]}`)) {
                   return true
                 }
-s
+
                 return false
               }),
             )
@@ -68,7 +68,7 @@ s
           dataSource = dataSource.filter((data) => data.address.includes(params.address || ''))
         }
 
-        return result = {
+        return {
           data: dataSource,
           total: providers.length,
           success: true,

@@ -24,7 +24,7 @@ const mutation = gql`
       specification: String!
       unit: String!
       providerId: ID
-    ): Good
+    ): Success
     updateGood(
       id: ID!
       goodId: String
@@ -32,10 +32,10 @@ const mutation = gql`
       specification: String
       unit: String
       providerId: ID
-    ): Good
+    ): Success
     deleteGood(
-      id: ID!
-    ): Good
+      ids: [ID]!
+    ): Success
     createProvider(
       name: String!
       phone: String
